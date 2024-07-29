@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES Encryption/Decryption and RSA Key Pair Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AES Encryption/Decryption and RSA Key Pair Generator</h1>
+        
+        <div>
+            <label for="inputText">Input Text:</label><br>
+            <textarea id="inputText" rows="4" cols="50"></textarea>
+        </div>
+
+        <div>
+            <button onclick="encryptAES()">Encrypt with AES</button>
+            <button onclick="decryptAES()">Decrypt with AES</button>
+        </div>
+
+        <div>
+            <label for="aesOutput">AES Output:</label><br>
+            <textarea id="aesOutput" rows="4" cols="50" readonly></textarea>
+        </div>
+        <hr>
+
+        <h2>RSA Key Generator</h2>
+        <div>
+            <label for="keyLength">Key Length:</label>
+            <select id="keyLength">
+                <option value="1024">1024</option>
+                <option value="2048">2048</option>
+            </select>
+            <button onclick="generateKeyPair()">Generate key pair</button>
+        </div>
+
+        <div>
+            <label for="privateKey">Private key:</label><br>
+            <textarea id="privateKey" rows="4" cols="50" readonly></textarea>
+        </div>
+
+        <div>
+            <label for="publicKey">Public key:</label><br>
+            <textarea id="publicKey" rows="4" cols="50" readonly></textarea>
+        </div>
+    </div>
+
+    <!-- Load JavaScript libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.1.0/jsencrypt.min.js"></script>
+    <!-- Load custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
